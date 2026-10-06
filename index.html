@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FundersSeekers — Where Vision Meets Capital</title>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+          },
+          colors: {
+            brand: {
+              50: '#eefcf5',
+              400: '#34d399',
+              500: '#10b981',
+              600: '#059669',
+              accent: '#38bdf8',
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    /* Subtle background grid pattern */
+    .bg-grid {
+      background-size: 40px 40px;
+      background-image: 
+        linear-gradient(to right, rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+    }
+  </style>
+</head>
+<body class="bg-[#0b0f17] text-slate-100 min-h-screen font-sans flex flex-col justify-between selection:bg-brand-500 selection:text-white relative overflow-x-hidden">
+
+  <!-- Ambient Glow Orbs -->
+  <div class="absolute -top-40 left-1/2 -translate-x-1/2 w-[700px] h-[400px] bg-brand-500/15 rounded-full blur-[140px] pointer-events-none -z-10"></div>
+  <div class="absolute top-1/2 -right-40 w-[450px] h-[450px] bg-sky-500/10 rounded-full blur-[130px] pointer-events-none -z-10"></div>
+
+  <!-- Background Grid -->
+  <div class="absolute inset-0 bg-grid pointer-events-none -z-10 opacity-70"></div>
+
+  <!-- Header / Navigation -->
+  <header class="w-full max-w-6xl mx-auto px-6 py-8 flex items-center justify-between">
+    <div class="flex items-center gap-2">
+      <div class="w-9 h-9 rounded-xl bg-gradient-to-tr from-brand-500 to-sky-400 flex items-center justify-center shadow-lg shadow-brand-500/20">
+        <svg class="w-5 h-5 text-slate-950 font-black" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+        </svg>
+      </div>
+      <span class="text-xl font-bold tracking-tight text-white">
+        Funders<span class="text-brand-400">Seekers</span>
+      </span>
+    </div>
+
+    <div class="hidden sm:inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-slate-800 bg-slate-900/60 backdrop-blur-md text-xs font-medium text-slate-400">
+      <span class="w-2 h-2 rounded-full bg-brand-400 animate-pulse"></span>
+      Private Alpha Launch Q3 2026
+    </div>
+  </header>
+
+  <!-- Hero Content -->
+  <main class="w-full max-w-4xl mx-auto px-6 py-10 flex-1 flex flex-col items-center justify-center text-center">
+    
+    <!-- Status Badge -->
+    <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-brand-500/25 bg-brand-500/10 text-brand-400 text-xs sm:text-sm font-semibold mb-6">
+      🚀 The Matchmaking Infrastructure for Startups & Capital
+    </div>
+
+    <!-- Main Headline -->
+    <h1 class="text-4xl sm:text-6xl md:text-7xl font-extrabold tracking-tight text-white leading-[1.1] mb-6">
+      Connecting world-class ideas with <span class="bg-gradient-to-r from-brand-400 via-teal-300 to-sky-400 bg-clip-text text-transparent">the right capital.</span>
+    </h1>
+
+    <p class="max-w-2xl text-slate-400 text-base sm:text-lg mb-10 leading-relaxed">
+      No cold emails. No friction. <strong class="text-slate-200">FundersSeekers</strong> is building a data-driven platform pairing vetted founders with angel syndicates, venture funds, and family offices.
+    </p>
+
+    <!-- Countdown Timer -->
+    <div class="grid grid-cols-4 gap-3 sm:gap-4 max-w-md w-full mb-10">
+      <div class="p-3 sm:p-4 rounded-2xl bg-slate-900/80 border border-slate-800 backdrop-blur-md">
+        <span id="days" class="block text-2xl sm:text-3xl font-extrabold text-white">00</span>
+        <span class="text-[11px] font-semibold text-slate-400 uppercase tracking-wider">Days</span>
+      </div>
+      <div class="p-3 sm:p-4 rounded-2xl bg-slate-900/80 border border-slate-800 backdrop-blur-md">
+        <span id="hours" class="block text-2xl sm:text-3xl font-extrabold text-white">00</span>
+        <span class="text-[11px] font-semibold text-slate-400 uppercase tracking-wider">Hours</span>
+      </div>
+      <div class="p-3 sm:p-4 rounded-2xl bg-slate-900/80 border border-slate-800 backdrop-blur-md">
+        <span id="minutes" class="block text-2xl sm:text-3xl font-extrabold text-white">00</span>
+        <span class="text-[11px] font-semibold text-slate-400 uppercase tracking-wider">Minutes</span>
+      </div>
+      <div class="p-3 sm:p-4 rounded-2xl bg-slate-900/80 border border-slate-800 backdrop-blur-md">
+        <span id="seconds" class="block text-2xl sm:text-3xl font-extrabold text-brand-400">00</span>
+        <span class="text-[11px] font-semibold text-slate-400 uppercase tracking-wider">Seconds</span>
+      </div>
+    </div>
+
+    <!-- Early Access Form Container -->
+    <div class="w-full max-w-md bg-slate-900/90 border border-slate-800 p-6 sm:p-7 rounded-2xl shadow-2xl backdrop-blur-xl">
+      
+      <!-- Role Selector -->
+      <div class="flex items-center justify-center p-1 bg-slate-950 rounded-xl mb-4 text-xs font-semibold">
+        <button id="roleSeeker" type="button" class="flex-1 py-2 rounded-lg bg-slate-800 text-white transition-all duration-200">
+          I'm a Founder (Seeker)
+        </button>
+        <button id="roleFunder" type="button" class="flex-1 py-2 rounded-lg text-slate-400 hover:text-white transition-all duration-200">
+          I'm an Investor (Funder)
+        </button>
+      </div>
+
+      <!-- Form -->
+      <form id="waitlistForm" class="flex flex-col gap-3">
+        <input 
+          id="emailInput" 
+          type="email" 
+          required 
+          placeholder="Enter your work email..." 
+          class="w-full px-4 py-3 bg-slate-950 border border-slate-700/80 rounded-xl text-white placeholder-slate-500 text-sm focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-transparent transition-all"
+        />
+        <button 
+          type="submit" 
+          class="w-full py-3 px-4 bg-brand-500 hover:bg-brand-400 text-slate-950 font-bold rounded-xl text-sm transition-all duration-200 shadow-lg shadow-brand-500/25 active:scale-[0.99]"
+        >
+          Request Priority Access
+        </button>
+      </form>
+
+      <!-- Success Feedback -->
+      <div id="successMessage" class="hidden mt-3 p-3 bg-brand-500/10 border border-brand-500/30 rounded-xl text-brand-400 text-xs">
+        🎉 You're on the list! We'll reach out with your private invitation soon.
+      </div>
+      
+      <p class="text-[11px] text-slate-500 mt-4">
+        Strict privacy guaranteed. Verified founders and accredited investors only.
+      </p>
+    </div>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="w-full max-w-6xl mx-auto px-6 py-6 border-t border-slate-800/60 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-4">
+    <p>© 2026 FundersSeekers.com. All rights reserved.</p>
+    <div class="flex items-center gap-6">
+      <a href="mailto:contact@fundersseekers.com" class="hover:text-slate-300 transition-colors">Contact</a>
+      <a href="#" class="hover:text-slate-300 transition-colors">Terms of Service</a>
+      <a href="#" class="hover:text-slate-300 transition-colors">Privacy Policy</a>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script>
+    // Countdown target (45 days from current date)
+    const targetDate = new Date();
+    targetDate.setDate(targetDate.getDate() + 45);
+
+    function updateCountdown() {
+      const now = new Date().getTime();
+      const diff = targetDate.getTime() - now;
+
+      if (diff <= 0) return;
+
+      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+      document.getElementById('days').innerText = String(days).padStart(2, '0');
+      document.getElementById('hours').innerText = String(hours).padStart(2, '0');
+      document.getElementById('minutes').innerText = String(minutes).padStart(2, '0');
+      document.getElementById('seconds').innerText = String(seconds).padStart(2, '0');
+    }
+
+    setInterval(updateCountdown, 1000);
+    updateCountdown();
+
+    // Toggle Role Buttons
+    let selectedRole = 'Founder';
+    const seekerBtn = document.getElementById('roleSeeker');
+    const funderBtn = document.getElementById('roleFunder');
+
+    seekerBtn.addEventListener('click', () => {
+      selectedRole = 'Founder';
+      seekerBtn.className = "flex-1 py-2 rounded-lg bg-slate-800 text-white transition-all duration-200";
+      funderBtn.className = "flex-1 py-2 rounded-lg text-slate-400 hover:text-white transition-all duration-200";
+    });
+
+    funderBtn.addEventListener('click', () => {
+      selectedRole = 'Investor';
+      funderBtn.className = "flex-1 py-2 rounded-lg bg-slate-800 text-white transition-all duration-200";
+      seekerBtn.className = "flex-1 py-2 rounded-lg text-slate-400 hover:text-white transition-all duration-200";
+    });
+
+    // Form Submission Handler
+    const form = document.getElementById('waitlistForm');
+    const emailInput = document.getElementById('emailInput');
+    const successMsg = document.getElementById('successMessage');
+
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const email = emailInput.value.trim();
+      if (!email) return;
+
+      // Show confirmation state
+      successMsg.classList.remove('hidden');
+      emailInput.value = '';
+      form.querySelector('button').disabled = true;
+      form.querySelector('button').classList.add('opacity-50', 'cursor-not-allowed');
+    });
+  </script>
+</body>
+</html>
